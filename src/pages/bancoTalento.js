@@ -1,7 +1,7 @@
 import React from "react";
 import { useUser } from "@auth0/nextjs-auth0/client";
 import { withPageAuthRequired } from "@auth0/nextjs-auth0";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Banco.module.css";
 import RedirectLogin from "@/components/RedirectLogin";
 import ProSidebar from "@/components/ProSidebar";
 import Head from "next/head";
@@ -36,8 +36,8 @@ function BancoTalento() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
             <ProSidebar />
-            <main>
-                Banco de Talento
+            <main className={styles.mainBanco}>
+                
             </main>
         </div>
       )
