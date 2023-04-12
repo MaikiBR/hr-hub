@@ -8,6 +8,15 @@
   height: 100vh;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.mainDashboard {
+  flex-grow: 1;
+}
+
 /* BUTTON */
 .button {
   text-decoration: none;
