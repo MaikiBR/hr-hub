@@ -3,16 +3,31 @@
     flex-direction: row;
 }
 
-.mainBanco {
+.mainBanco, .mainSeguridad, .mainProcesos, .mainIns  {
     flex-grow: 1;
-  }
+}
 
 .mainBanco {
     background-image: url('https://res.cloudinary.com/dqbvoycsx/image/upload/v1681249431/FondoSuperCream_gmqglm.jpg');
     background-size: cover;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.cardContainer {
-    background-color: azure;
+.mainSeguridad, .mainProcesos, .mainIns {
+    background-image: url('https://res.cloudinary.com/dqbvoycsx/image/upload/v1681249431/FondoSuperCream_gmqglm.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardsContainer {
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
 }

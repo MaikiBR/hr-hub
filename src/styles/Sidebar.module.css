@@ -1,18 +1,21 @@
 .sidebar {
     height: 100vh;
     font-family: system-ui;
-    border: none !important;
+    border: none;
 }
-.item {
+
+.menuItem {
     color: whitesmoke;
 }
 
 .menuItem:hover {
-    border-right: 4px solid whitesmoke;
-    background: #DD0C1C;
+    color: black;
 }
 
-.icons {
-    font-size: larger;
+.toggleBtn:hover {
+    color: black;
 }
+
+
+
 
