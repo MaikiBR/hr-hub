@@ -6,11 +6,12 @@ import logo from "../assets/images/logos/Logo RH HR Hub by Super Cream-03.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import ProSidebar from "@/components/ProSidebar";
+import LoadingPage from "@/components/LoadingPage";
 
 export default function Home() {
   const { user, error, isLoading } = useUser();
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingPage />;
   if (error) return <div>{error.message}</div>;
 
   if (user) {
@@ -26,7 +27,7 @@ export default function Home() {
         <main className={styles.mainDashboard}>
           <span className={styles.textDashboard}>Bienvenido {user.name}</span>
           <br />
-          <a className={styles.textDashboard} href="/api/auth/logout">
+          <a className={styles.logoutLink} href="/api/auth/logout">
             Logout
           </a>
         </main>

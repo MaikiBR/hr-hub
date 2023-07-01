@@ -21,7 +21,7 @@ const ProSidebar = () => {
 
   return (
     <Box className={styles.sidebarContainer}>
-      <Sidebar className={styles.sidebar} rtl={false}>
+      <Sidebar className={styles.sidebar} rtl={false} defaultCollapsed>
         <Menu>
           <MenuItem
             className={styles.toggleBtn}

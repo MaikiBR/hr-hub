@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import "@/styles/globals.css";
 import { UserProvider, useUser } from "@auth0/nextjs-auth0/client";
 import { ProSidebarProvider } from "react-pro-sidebar";

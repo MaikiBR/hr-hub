@@ -7,6 +7,10 @@ import ProSidebar from "@/components/ProSidebar";
 import Head from "next/head";
 import Link from 'next/link';
 import { Box, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import logo from "../assets/images/logos/Logo RH HR Hub by Super Cream-03.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import LoadingPage from "@/components/LoadingPage";
 
 function BancoTalento() {
   const { user, error, isLoading } = useUser();
@@ -15,7 +19,7 @@ function BancoTalento() {
 
 //   const userRoles = user?.[`${process.env.NEXT_PUBLIC_AUTH0_NAMESPACE}`] ?? [];
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingPage />;
   if (error) return <div>{error.message}</div>;
 
   if (user && !user.email_verified) {
@@ -117,9 +121,20 @@ function BancoTalento() {
         </div>
       )
     );
-  }
+  };
+
+  return (
+    <div>
+        <RedirectLogin
+          mensaje="Por favor inicia sesión."
+          mensajeRedirect="Redireccionandote al inicio en 5 segundos..."
+        />
+    </div>
+  );
 }
+
+// export const getServerSideProps = withPageAuthRequired();
+
 
 export default BancoTalento;
 
-export const getServerSideProps = withPageAuthRequired();

@@ -88,10 +88,6 @@
 .mainDashboard {
   background-image: url('https://res.cloudinary.com/dqbvoycsx/image/upload/v1681249431/FondoSuperCream_gmqglm.jpg');
   background-size: cover;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   height: 100vh;
 }
 

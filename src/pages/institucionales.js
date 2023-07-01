@@ -7,12 +7,13 @@ import ProSidebar from "@/components/ProSidebar";
 import Head from "next/head";
 import { videos } from "@/data/ins_videos_data";
 import { Grid, Paper } from "@mui/material";
+import LoadingPage from "@/components/LoadingPage";
 
 function Institucionales() {
   const { user, error, isLoading } = useUser();
   console.log(user);
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <LoadingPage />;
   if (error) return <div>{error.message}</div>;
 
   if (user && !user.email_verified) {
@@ -64,9 +65,18 @@ function Institucionales() {
         </div>
       )
     );
-  }
+  };
+
+  return (
+    <div>
+        <RedirectLogin
+          mensaje="Por favor inicia sesión."
+          mensajeRedirect="Redireccionandote al inicio en 5 segundos..."
+        />
+    </div>
+  );
 }
 
 export default Institucionales;
 
-export const getServerSideProps = withPageAuthRequired();
+// export const getServerSideProps = withPageAuthRequired();
