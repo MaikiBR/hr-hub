@@ -28,7 +28,7 @@ export default function Home() {
           <span className={styles.textDashboard}>Bienvenido {user.name}</span>
           <br />
           <a className={styles.logoutLink} href="/api/auth/logout">
-            Logout
+            Cerrar sesión
           </a>
         </main>
       </div>
